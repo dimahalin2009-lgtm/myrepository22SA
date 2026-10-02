@@ -8,19 +8,16 @@ print(result)
 
 
 import math
-# Считываем 4 числа, каждое на отдельной строке
 x1 = float(input())
 y1 = float(input())
 x2 = float(input())
 y2 = float(input())
-# Вычисляем расстояние
 distance = math.sqrt((x1 - x2)**2 + (y1 - y2)**2)
 print(distance)
 
 
 
 number = int(input("Введите положительное четырёхзначное число: "))
-# Находим цифры с помощью целочисленного деления и остатка от деления
 thousands = number // 1000
 hundreds = (number // 100) % 10
 tens = (number // 10) % 10
@@ -34,9 +31,6 @@ print(f"Цифра в позиции единиц равна {units}")
 
 n = int(input("Введите количество школьников: "))
 k = int(input("Введите количество мандаринов: "))
-# Целочисленное деление - сколько достанется каждому
-mandarins_per_student = k // n
-# Остаток от деления - сколько останется в корзине
 leftover = k % n
 print(mandarins_per_student)
 print(leftover)
@@ -52,19 +46,12 @@ print(f"{total_minutes} мин - это {hours} час {minutes} минут.")
 
 import math
 x_degrees = float(input("Введите угол в градусах: "))
-# Переводим градусы в радианы
 x_radians = math.radians(x_degrees)
-# Вычисляем выражение
-# math.tan(x) - это тангенс, возводим в квадрат
 result = math.sin(x_radians) + math.cos(x_radians) + math.tan(x_radians)**2
 print(result)
 
 
 
 place = int(input("Введите номер места (от 1 до 36): "))
-# Целочисленное деление: (place - 1) // 4 + 1
-# Например, место 1: (1-1)//4 + 1 = 1
-# Место 4: (4-1)//4 + 1 = 0 + 1 = 1
-# Место 5: (5-1)//4 + 1 = 1 + 1 = 2
 coupe_number = (place - 1) // 4 + 1
 print(coupe_number)
