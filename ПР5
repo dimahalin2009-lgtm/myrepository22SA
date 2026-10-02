@@ -1,1 +1,58 @@
+TAX_RATE = 0.13
 
+income = float(input("Введите годовой доход: "))
+tax = income * TAX_RATE
+net_income = income - tax
+
+print(f"Доход: {income:,.2f} руб.")
+print(f"Налог: {tax:,.2f} руб.")
+print(f"На руки: {net_income:,.2f} руб.")
+
+
+
+weight, height = map(float, input("Введите вес (кг) и рост (м) через пробел: ").split())
+bmi = weight / (height * height)
+print(f"Ваш ИМТ: {bmi:.1f}")
+
+
+
+USD_TO_RUB = 95.50
+
+def convert_usd_to_rub(amount_usd):
+    """Конвертирует доллары в рубли."""
+    return amount_usd * USD_TO_RUB
+
+usd = float(input("Введите сумму в долларах: "))
+rub = convert_usd_to_rub(usd)
+print(f"{usd:.2f} USD = {rub:.2f} RUB")
+
+
+
+import math
+
+def calculate_rectangle_area(width, height):
+    """Возвращает площадь прямоугольника."""
+    return width * height
+
+def calculate_circle_area(radius):
+    """Возвращает площадь круга."""
+    return math.pi * (radius ** 2)
+
+w = float(input("Ширина прямоугольника: "))
+h = float(input("Высота прямоугольника: "))
+print(f"Площадь прямоугольника: {calculate_rectangle_area(w, h):.2f}")
+
+r = float(input("Радиус круга: "))
+print(f"Площадь круга: {calculate_circle_area(r):.2f}")
+# def для созданния новой функции
+
+
+
+amount = int(input("Введите сумму (кратную 100): "))
+denominations = [5000, 2000, 1000, 500, 200, 100]
+
+for denom in denominations:
+    count = amount // denom
+    if count > 0:
+        print(f"Купюр {denom} руб.: {count} шт.")
+        amount %= denom
