@@ -1,0 +1,47 @@
+t = float(input())
+p = int(input())
+pulse = int(input())
+
+if t < 35 or t > 38 or p < 105 or p > 140 or pulse < 55 or pulse > 110:
+    print("Требуется врач")
+elif 36 <= t <= 37 and 110 <= p <= 130 and 60 <= pulse <= 100:
+    print("Нормальное состояние")
+else:
+    print("Легкое недомогание")
+
+
+
+t = float(input())
+p = int(input())
+pulse = int(input())
+
+if t < 35 or t > 38 or p < 105 or p > 140 or pulse < 55 or pulse > 110:
+    print("Требуется врач")
+elif 36 <= t <= 37 and 110 <= p <= 130 and 60 <= pulse <= 100:
+    print("Нормальное состояние")
+else:
+    print("Легкое недомогание")
+
+
+
+x1, y1 = int(input()), int(input())
+x2, y2 = int(input()), int(input())
+
+if (x1 + y1) % 2 == (x2 + y2) % 2:
+    print("YES")
+else:
+    print("NO")
+
+
+
+x1, y1 = int(input()), int(input())
+x2, y2 = int(input()), int(input())
+
+if abs(x1 - x2) == abs(y1 - y2):
+    print("YES")
+else:
+    print("NO")
+
+
+
+
